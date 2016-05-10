@@ -1,4 +1,9 @@
 sudo: false
 install: true
+# whitelist
+branches:
+  only:
+    - gh-pages
+    - master
 script:
   - echo hi 
