@@ -1,10 +1,7 @@
-sudo: false
+sudo: required
+dist: precise
 language: ruby
-cache:
-  directories:
-  - $HOME/hola
-install: true
+
 script:
-  - mkdir hola
-  - cd hola
-  - echo "//this is a file to commit and cache, why not?" >> new.txt
+  - bundler --version
+  - echo hola
