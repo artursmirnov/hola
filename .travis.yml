@@ -1,7 +1,12 @@
 sudo: required
 dist: precise
 language: ruby
+# blocklist
+branches:
+  except:
+    - legacy
 
+install: true
 script:
   - bundler --version
   - echo hola
