@@ -4,7 +4,7 @@ language: ruby
 install: true
 script:
   - bundler --version
-  - echo hola
+  - echo $GATO
 
 after_success: echo si
 after_failure: echo no
