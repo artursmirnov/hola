@@ -1,12 +1,10 @@
-sudo: required
-dist: precise
+sudo: false
 language: ruby
-# blocklist
-branches:
-  except:
-    - legacy
 
 install: true
 script:
   - bundler --version
   - echo hola
+
+after_success: echo si
+after_failure: echo no
