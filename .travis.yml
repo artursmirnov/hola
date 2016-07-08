@@ -4,7 +4,7 @@ language: ruby
 install: true
 script:
   - bundler --version
-  - echo $GATO
+  - javac
 
 after_success: echo si
 after_failure: echo no
