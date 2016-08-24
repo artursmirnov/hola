@@ -1,10 +1,10 @@
-sudo: false
-language: ruby
+sudo: required
+language: java
 
 install: true
 script:
-  - xcode
   - echo hola
+  - bash please-fail.sh
 
 after_success: echo si
 after_failure: echo no
