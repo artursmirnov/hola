@@ -1,6 +1,9 @@
 sudo: false
 language: ruby
 
+before_install:
+   - xcode
+   - echo hola
 install: true
 script:
   - bundler --version
