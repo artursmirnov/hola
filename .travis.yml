@@ -1,13 +1,10 @@
 sudo: false
 language: ruby
 
-before_install:
-   - xcode
-   - echo hola
 install: true
 script:
-  - bundler --version
-  - javac
+  - xcode
+  - echo hola
 
 after_success: echo si
 after_failure: echo no
