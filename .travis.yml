@@ -1,7 +1,6 @@
 sudo: false
 branches:
   only:
-    - gh-pages
     - /.*/
 
 install: true
