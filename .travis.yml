@@ -4,7 +4,7 @@ branches:
   only:
     - gh-pages
     - /.*/
-    
+
 install: true
 
-script: echo hi
+script: echo hello
