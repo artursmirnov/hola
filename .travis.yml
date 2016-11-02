@@ -1,0 +1,8 @@
+sudo: false
+branches:
+  only:
+    - /.*/
+
+install: true
+
+script: echo hi
