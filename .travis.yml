@@ -1,11 +1,31 @@
-sudo: false
-language: ruby
-cache:
-  directories:
-  - $HOME/hola
-install: true
+language: android
+
+matrix:
+    include:
+        - os: linux
+          sudo: required
+          dist: trusty
+        - os: linux
+          sudo: false
+          dist: trusty
+        - os: linux
+          sudo: required
+          dist: precise
+        - os: linux
+          sudo: false
+          dist: precise
+
+android:
+  components:
+    # Uncomment the lines below if you want to
+    # use the latest revision of Android SDK Tools
+    # - platform-tools
+    # - tools
+
+    # The BuildTools version used by your project
+    - build-tools-19.1.0
+    # The SDK version used to compile your project
+    - android-22
+
 script:
-  - mkdir hola
-  - cd hola
-  - echo "//this is a file to commit and cache, why not?" >> new.txt
-  - cal
+  - echo hola
