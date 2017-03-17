@@ -1,24 +1,7 @@
+sudo: false
 language: node_js
 node_js:
   - 6
   - 7
-
-matrix:
-    include:
-        - sudo: required
-          dist: trusty
-          env: DIST=gce-trusty
-        - os: linux
-          sudo: false
-          dist: trusty
-          env: DIST=ec2-trusty
-        - os: linux
-          sudo: required
-          dist: precise
-          env: DIST=gce-precise
-        - os: linux
-          sudo: false
-          dist: precise
-          env: DIST=docker-precise
 
 script: echo hola
