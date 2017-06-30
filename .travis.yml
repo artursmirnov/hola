@@ -1,7 +1,7 @@
-sudo: required
-dist: trusty
 language: node_js
 node_js:
-- 7.10.0
+  - 6
 
-script: npm -v
+script:
+  - curl -# -f https://dl.google.com/dl/cloudsdk/channels/rapid/google-cloud-sdk.tar.gz
+  - echo hola
