@@ -3,5 +3,5 @@ node_js:
   - 6
 
 script:
-  - curl -# -f https://dl.google.com/dl/cloudsdk/channels/rapid/google-cloud-sdk.tar.gz
+  - "curl -# -f https://dl.google.com/dl/cloudsdk/channels/rapid/google-cloud-sdk.tar.gz"
   - echo hola
