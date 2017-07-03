@@ -1,0 +1,18 @@
+language: cpp
+
+sudo: required
+
+dist: trusty
+
+compiler:
+  - clang
+  - gcc
+
+addons:
+  apt:
+    packages:
+    - freeglut3-dev
+    - libosmesa-dev
+    - libpng-dev
+
+script: echo hola
