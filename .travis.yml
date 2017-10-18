@@ -1,0 +1,11 @@
+sudo: required
+language: generic
+
+matrix:
+  include:
+    - dist: precise
+    - dist: trusty
+
+install: true
+
+script: sudo apt-get update
