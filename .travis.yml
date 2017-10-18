@@ -6,6 +6,13 @@ matrix:
     - dist: precise
     - dist: trusty
 
+before_install:
+- sudo rm -vf /etc/apt/sources.list.d/*riak*
+- sudo apt-get update
+
+services:
+  - riak
+  
 install: true
 
-script: sudo apt-get update
+script: echo hola
