@@ -1,11 +1,24 @@
-sudo: required
+sudo: false
 dist: trusty
 
-language: android
+language: scala
 
-jdk: oraclejdk9
+jdk:
+  - oraclejdk8
 
-script:
-  - java -version
-  - ./gradlew wrapper --gradle-version=4.4.1 --distribution-type=bin
-  - gradle -v
+before_install:
+- wget http://download.redis.io/releases/redis-2.8.19.tar.gz
+- tar xzf redis-2.8.19.tar.gz -C /opt
+- cd /opt/redis-2.8.19/ && make && sudo make install
+- redis-server ./redis.conf &
+- cd ~/build/fiksu/rtb-java
+
+cache:
+   directories:
+   - $HOME/.ivy2
+   - $HOME/.sbt
+
+scala:
+  - 2.11.7
+
+script: "sbt ++$TRAVIS_SCALA_VERSION test"
