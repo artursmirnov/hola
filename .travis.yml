@@ -3,6 +3,8 @@ dist: trusty
 
 language: android
 
+jdk: oraclejdk9
+
 script:
   - java -version
   - gradle -v
