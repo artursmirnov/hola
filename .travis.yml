@@ -1,0 +1,8 @@
+sudo: required
+dist: trusty
+
+language: android
+
+script:
+  - java -version
+  - gradle -v
