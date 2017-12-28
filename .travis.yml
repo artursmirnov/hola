@@ -1,8 +1,6 @@
-sudo: required
-dist: trusty
-
-language: java
-
-script:
-  - java -version
-  - gradle -v
+language: scala
+matrix:
+  include:
+  - sudo: false
+  - sudo: required
+script: df -h
