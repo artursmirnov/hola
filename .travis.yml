@@ -1,7 +1,7 @@
 sudo: required
 dist: trusty
 
-language: android
+language: java
 
 script:
   - java -version
