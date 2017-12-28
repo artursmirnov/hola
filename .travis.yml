@@ -1,7 +1,6 @@
-sudo: false
 dist: trusty
 
-language: java
+language: scala
 
 jdk:
   - oraclejdk8
