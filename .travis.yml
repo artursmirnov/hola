@@ -1,9 +1,19 @@
-sudo: false
-dist: trusty
-
-language: java
-jdk: oraclejdk9
+language: generic
+env:
+    global:
+    - CLOUDSDK_CORE_DISABLE_PROMPTS=1
+    - GCLOUD_SDK_PATH=$HOME/google-cloud-sdk
+matrix:
+    include:
+        - env: image=ec2
+          sudo: false
+        - env: image=gce
+          sudo: required
+        - env: image=gce-deprecated
+          group: deprecated-2017Q4
+          sudo: required
+install: true
 script:
-  - java -version
-  - ./gradlew wrapper --gradle-version=4.4.1 --distribution-type=bin
-  - gradle -v
+   - if [[ ! -d ${HOME}/google-cloud-sdk ]]; then curl https://dl.google.com/dl/cloudsdk/channels/rapid/install_google_cloud_sdk.bash | sed 's/zxvf/zxf/' | bash; fi
+notifications:
+    email: never
