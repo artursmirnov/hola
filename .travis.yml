@@ -1,6 +1,8 @@
 sudo: required
-dist: precise
+dist: trusty
 language: ruby
+
+install: true
 
 script:
   - bundler --version
