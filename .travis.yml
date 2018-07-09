@@ -1,7 +1,6 @@
-language: groovy
+language: ruby
 sudo: required
 dist: trusty
-group: deprecated-2017Q2
 
 script:
   - echo hola
