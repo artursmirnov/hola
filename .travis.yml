@@ -5,5 +5,4 @@ group: deprecated-2017Q2
 
 script:
   - echo hola
-  - haveged -v
-  - haveged --version
+  - mongo --version
