@@ -1,7 +1,6 @@
-sudo: required
-dist: precise
-language: ruby
+language: php
+
+install: true
 
 script:
-  - bundler --version
   - echo hola
